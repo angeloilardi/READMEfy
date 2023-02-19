@@ -17,7 +17,7 @@ Noted keeps track of all your notes so that you will never forget anything again
 
 ## Installation
 
-You can install all dependencies by running 'node install'
+You can install all dependencies by running `node install`
 
 ## Usage
 
@@ -33,7 +33,7 @@ Forks and pull requests
 
 ## Tests
 
-Tests can be run by using 'node test'
+Tests can be run by using `node test`
 
 ## Questions
 
