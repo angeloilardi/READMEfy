@@ -40,7 +40,7 @@ The file will contain a table of contents with the following sections:
 
 A sample README file created with this application can be found in the sample folder in this repository or by clicking [here](./sample/README.md)
 
-Additionally, you can watch a [walkthrough video](https://drive.google.com/file/d/1I90LRSpYm9NMbinvpsF71p8rY06nESnF/view?usp=share_link).
+Additionally, you can watch a [walkthrough video](http://e.pc.cd/uOEotalK).
 
 ## License
 
