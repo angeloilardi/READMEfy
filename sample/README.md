@@ -1,9 +1,10 @@
-# n x vfd
-      [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+# Noted
+
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 
 ## Description
 
-err
+Noted keeps track of all your notes so that you will never forget anything again. All notes will be in files having the current date as a name
 
 ## Table of Contents 
 
@@ -16,24 +17,24 @@ err
 
 ## Installation
 
-ferbe
+You can install all dependencies by running 'node install'
 
 ## Usage
 
-fbbe
+Just enter your note and it will be automatially added to that day's file
 
 ## License
 
-This project is licensed under the GNU license.
+This project is licensed under the Mozilla license.
 
 ## How to Contribute
 
-bre r rt
+Forks and pull requests
 
 ## Tests
 
-breber
+Tests can be run by using 'node test'
 
 ## Questions
 
-For any quesions regarding this project, open an issue or reach out via email at brebre. You can find more of my work at [rb](https://github.com/rb/).
+For any quesions regarding this project, open an issue or reach out via email at angelo@ilardi.com. You can find more of my work at [helldorado82](https://github.com/helldorado82/).

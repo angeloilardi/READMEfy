@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 inquirer
+  // prompt with questions
   .prompt([
     {
       type: "iput",
@@ -30,7 +31,7 @@ inquirer
     },
     {
       type: "iput",
-      message: "Provide examples on how to run test",
+      message: "Provide examples on how to run tests",
       name: "tests",
     },
     {
@@ -53,7 +54,8 @@ inquirer
   ])
   .then((response) => {
     let licenseBadge = "";
-    let licenceDescrpition = `This project is licensed under the ${response.license} license.`;
+    let licenceDescription = `This project is licensed under the ${response.license} license.`;
+    // switch statement for license choice
     switch (response.license) {
       case "MIT":
         licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
@@ -74,23 +76,24 @@ inquirer
 
       case "No license":
         licenseBadge = "";
-        licenceDescrpition = `This project does not use a licence.`;
+        licenceDescription = `This project does not use a licence.`;
         break;
 
       default:
         break;
     }
 
-    console.log(response);
-    var dir = "./created";
+    // creates 'created' folder it it doesn't exist
 
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir);
+    if (!fs.existsSync("./created")) {
+      fs.mkdirSync("./created");
     }
     fs.writeFile(
       "./created/README.md",
-      `# ${response.projectName}
-      ${licenseBadge}
+
+`# ${response.projectName}
+
+${licenseBadge}
 
 ## Description
 
@@ -115,7 +118,7 @@ ${response.usage}
 
 ## License
 
-${licenceDescrpition}
+${licenceDescription}
 
 ## How to Contribute
 
