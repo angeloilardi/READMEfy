@@ -44,7 +44,7 @@ Additionally, you can watch a [walkthrough video](http://e.pc.cd/uOEotalK).
 
 ## License
 
-This project is licensed under the Mozilla license.
+This project is licensed under the MIT license.
 
 ## How to Contribute
 
