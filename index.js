@@ -1,12 +1,96 @@
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
+const fs = require("fs");
 
 inquirer
-.prompt
+  .prompt([
+    {
+      type: "iput",
+      message: "What is the name of your project?",
+      name: "projectName",
+    },
+    {
+      type: "iput",
+      message: "Provide a description of your project",
+      name: "description",
+    },
+    {
+      type: "iput",
+      message: "Describe how to install this application",
+      name: "installation",
+    },
+    {
+      type: "iput",
+      message: "Provide instructions and examples for use",
+      name: "usage",
+    },
+    {
+      type: "iput",
+      message: "Include guidelines for how to contribute to your project",
+      name: "contributions",
+    },
+    {
+      type: "iput",
+      message: "Provide examples on how to run test",
+      name: "tests",
+    },
+    {
+      type: "list",
+      message:
+        "If you'd like to use a license, please choose one of the followig",
+      name: "license",
+      choices: ["MIT", "GNU", "Mozilla", "Apache", "No license"],
+    },
+    {
+      type: "input",
+      message: "Enter your GitHub username",
+      name: "username",
+    },
+    {
+      type: "input",
+      message: "Enter your email address",
+      name: "email",
+    },
+  ])
+  .then((response) => {
+    let licenseBadge = "";
+    let licenceDescrpition = `This project is licensed under the ${response.license} license.`;
+    switch (response.license) {
+      case "MIT":
+        licenseBadge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
 
+        break;
 
+      case "GNU":
+        licenseBadge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+        break;
 
+      case "Mozilla":
+        licenseBadge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+        break;
 
-`# ${response.projectName}
+      case "Apache":
+        licenseBadge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+        break;
+
+      case "No license":
+        licenseBadge = "";
+        licenceDescrpition = `This project does not use a licence.`;
+        break;
+
+      default:
+        break;
+    }
+
+    console.log(response);
+    var dir = "./created";
+
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir);
+    }
+    fs.writeFile(
+      "./created/README.md",
+      `# ${response.projectName}
+      ${licenseBadge}
 
 ## Description
 
@@ -16,8 +100,10 @@ ${response.description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Credits](#credits)
 - [License](#license)
+- [Contributions](#how-to-contribute)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 
@@ -27,14 +113,9 @@ ${response.installation}
 
 ${response.usage}
 
-## Credits
-
-${response.credit}
-
 ## License
 
-${response.usage}
-
+${licenceDescrpition}
 
 ## How to Contribute
 
@@ -42,4 +123,12 @@ ${response.contributions}
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.`
+${response.tests}
+
+## Questions
+
+For any quesions regarding this project, open an issue or reach out via email at ${response.email}. You can find more of my work at [${response.username}](https://github.com/${response.username}/).`,
+      (err) =>
+        err ? console.log(err) : console.log("Your README has been created!")
+    );
+  });
