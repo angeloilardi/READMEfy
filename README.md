@@ -24,8 +24,8 @@ Start by cloning the repo and running `node index.js`. You will be prompted with
 - Name and description of your project
 - Instructions for installation and for usage
 - Explain others how to contribute and how to run tests
-- Choose license
-- Enter email address and GitHub username for contacts
+- Chosen license
+- Email address and GitHub username for contacts
 
 The generated REAME file will be saved in the 'created' folder. If such folder doesn't exist, it will be created.
 
@@ -40,7 +40,7 @@ The file will contain a table of contents with the following sections:
 
 A sample README file created with this application can be found in the sample folder in this repository or by clicking [here](./sample/README.md)
 
-Addition, you can watch a [walkthrough video](https://drive.google.com/file/d/1I90LRSpYm9NMbinvpsF71p8rY06nESnF/view?usp=share_link).
+Additionally, you can watch a [walkthrough video](https://drive.google.com/file/d/1I90LRSpYm9NMbinvpsF71p8rY06nESnF/view?usp=share_link).
 
 ## License
 
@@ -56,4 +56,4 @@ Tests can be run by using `node test`
 
 ## Questions
 
-For any quesions regarding this project, open an issue or reach out via email at angelo@ilardi.com. You can find more of my work at [helldorado82](https://github.com/helldorado82/).
+For any quesions regarding this project, open an issue or reach out via email at angeloilardi.dev@gmail.com. You can find more of my work at [helldorado82](https://github.com/helldorado82/).
